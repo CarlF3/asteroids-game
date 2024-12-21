@@ -7,16 +7,18 @@ def main():
     print(f"Screen height: {SCREEN_HEIGHT}")
 
     pygame.init()
-    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT)) # 1280 x 720 px
 
     clock = pygame.time.Clock()
     dt = 0
 
     while True:
+        # Event handling
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
 
+        # Basic black screen fill
         pygame.Surface.fill(screen, (0, 0, 0))
         pygame.display.flip()
 
